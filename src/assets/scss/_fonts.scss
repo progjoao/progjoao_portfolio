@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'black';
+    font-weight: 900;
+    src: url(../fonts/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: 'black-italic';
+    font-weight: 900;
+    src: url(../fonts/Roboto-BlackItalic.ttf);
+}
+@font-face {
+    font-family: 'bold';
+    font-weight: 700;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: 'regular';
+    font-weight: 400;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'light';
+    font-weight: 300;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: 'thin';
+    font-weight: 100;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: 'thin-italic';
+    font-weight: 100;
+    src: url(../fonts/Roboto-ThinItalic.ttf);
+}
+.font-weight-black {
+    font-family: 'black';
+    font-weight: 900;
+}
+.font-weight-black-italic {
+    font-family: 'black-italic';
+    font-weight: 900;
+}
+.font-weight-bold {
+    font-family: 'bold';
+    font-weight: 700;
+}
+.font-weight-regular {
+    font-family: 'regular';
+    font-weight: 400;
+}
+.font-weight-light {
+    font-family: 'light';
+    font-weight: 300;
+}
+.font-weight-thin {
+    font-family: 'thin';
+    font-weight: 100;
+}
+.font-weight-thin-italic {
+    font-family: 'thin-italic';
+    font-weight: 100;
+}

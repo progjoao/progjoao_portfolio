@@ -1,0 +1,322 @@
+<div class="principal d-flex">
+    <aside class="bg-primary d-flex flex-column align-items-center">
+        <div class="">
+            <div class="d-flex flex-column align-items-center">
+                <!-- <button class="btn-x-sidebar bg-transparent border-0 p-1">
+                    <img src="/assets/icons/close.png" alt="fechaar o menu" >
+                </button> -->
+                <img class="img-perfil" src="/assets/images/gaviao.jpg" alt="foto de perfil" />
+                <h1 class="font-weight-bold dasd ad h4 text-secondary p-3">João Ricardo</h1>
+            </div>
+            
+            <!-- <a class="media text-white" target="_blank" href="https://www.linkedin.com/in/joaoricardobianchinivieira/">
+                <img class="icons mr-3 mt-1" src="/assets/icons/in.png" alt="linkedin" />
+                <p class="mt-1">João Ricardo</p>
+            </a> -->
+        </div>
+        <div class="d-flex flex-column text-center text-white p-3">
+            <a class="text-secondary font-weight-thin mb-2" href="#home" routerLinkActive="selected">Home</a>
+            <a class="font-weight-thin mb-2" href="#about" routerLinkActive="selected">About</a>
+            <a class="font-weight-thin mb-2" href="#portfolio" routerLinkActive="selected">Portfolio</a>
+            <a class="font-weight-thin mb-2" href="#datas" routerLinkActive="selected">Resume</a>
+            <a class="font-weight-thin mb-2" href="" routerLinkActive="selected">Contact</a>
+            <a class="font-weight-thin mb-2" href="" routerLinkActive="selected">Blog</a>
+        </div>
+        <hr class="bg-secondary w-100 m-0"/>
+        <div class="d-flex text-center text-white p-3">
+            <a href="https://web.whatsapp.com/send?phone=55957666011"><img width="40" class="socials p-2" src="/assets/icons/wpp.png" alt="Whatpp"></a>
+            <a href="https://www.linkedin.com/in/joaoricardobianchinivieira/"><img width="40" class="socials p-2" src="/assets/icons/in.png" alt="Linkedin"></a>
+            <a href=""><img width="40" class="socials p-2" src="/assets/icons/in.png" alt="Linkedin"></a>
+        </div>
+    </aside>
+    <main class="text-white">
+        <section id="home" class="first-section bg-primary d-flex flex-column justify-content-center align-items-center text-center">
+            <div class="filter p-5">
+                <h1 class="font-weight-black text-wrap display-3">I'm a Developer</h1>
+                <h4 class="font-weight-black-italic mt-2 mb-4">FullStack</h4>
+                <a href="#portfolio" class="bg-primary font-weight-thin-italic btn-mode">View portifolio</a>
+            </div>
+            <span></span>
+        </section>
+
+        <section id="about" class="second-section bg-primary d-flex flex-column justify-content-center align-items-center">
+            <h1 class="font-weight-black text-wrap display-5 mt-3">About me</h1>
+            <div>
+                <div class="media mt-5 mb-3">
+                    <h5 class="text-secondary font-weight-regular mb-1">Who am I?</h5>
+                    <p class="font-weight-thin-italic">
+                        Hi anyone! My name's João Ricardo, I'm 23 years old, I'am a Front-End Developer e I am studying to become a FullStack in the near future. 
+                    </p>
+                </div>    
+                <div class="media mt-5 mb-3">
+                    <h5 class="text-secondary font-weight-regular mb-1">The first contact with a computer?</h5>
+                    <p class="font-weight-thin-italic">
+                        A little of how I started my history with the technology, said my family that my first contact with a computer was when I was 2 years old, after this I never more stayd far from a pc.
+                        <br>
+                        Years later I knew how to disassemble, assemble, clean and started to buy parts, assemble and tune hardware and software by myself, and with that, one thing led to another, until today I am a Developer.
+                        <br>
+                    </p>
+                </div>    
+                <div class="media mt-5 mb-3">
+                    <h5 class="text-secondary font-weight-regular mb-1">What I like to do??</h5>
+                    <p class="font-weight-thin-italic">
+                        I like to play video games, I like train in the gym, like to run and walk, I want to back to pratice Muay Thai, I like also listening to music all day long if possible.
+                        I like to rec and edit videos for my channel, like the financial business about investments and I like so much of to learn new thins, so I'm always find to learn new something
+                    </p>
+                </div>    
+                <div class="media mt-5 mb-3">
+                    <h5 class="text-secondary font-weight-regular mb-1">What are my plans?</h5>
+                    <p class="font-weight-thin-italic">
+                        Talking in the short term, I will keep the studies, keep the trains and I believe that the most difficult thing is keep the constancy everyday.
+                    </p>
+                </div>    
+            </div>
+        </section>
+        
+        <section id="portfolio" class="third-section bg-primary d-flex flex-column justify-content-center align-items-center">
+            <h1 class="font-weight-black text-wrap display-5 mb-3 text-center">My portfolio</h1>
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="cards"  *ngFor="let project of projects">  
+                    <a target="_black" href="{{project.link}}">
+                        <img style="width: 16em;" src="{{ project.image }}" alt="Alphaaio">  
+                    </a>
+                    <div class="d-flex justify-content-between">
+                        <small class="font-weight-regular text-secondary mt-2">WEBSITE</small>
+                        <a class="d-flex box-heart mt-1">
+                            <img class="heart" src="/assets/icons/heart.png" alt="Coração">
+                            <small class="font-weight-thin-italic"> {{ project.likes }} </small>
+                        </a>
+                    </div>
+                    <h3 class="font-weight-thin mt-5"> {{ project.name }} </h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="datas" class="fourth-section bg-primary">
+            <div class="text-center">
+                <small class="font-weight-thin text-secondary">+2 experience years</small>
+                <h1 class="font-weight-black text-wrap display-5">Resume</h1>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <!-- <button class="font-weight-thin btn-mode" (click)="setOverviewMode('skills')">Skills</button> -->
+                <button class="font-weight-thin btn-mode" (click)="setOverviewMode('study')">Studies</button>
+                <button class="font-weight-thin btn-mode" (click)="setOverviewMode('experience')">Experience</button>
+            </div>
+            <hr class="bg-secondary mt-5" />
+            <div *ngIf="overviewMode === 'study'">
+                <div>
+                    <div>
+                        <h6 class="font-weight-bold">English</h6>
+                        <p class="font-weight-light text-tertiary mt-1">∙ EnglishBay - 2 months.</p>
+                        <p class="font-weight-light text-tertiary">∙ Duo lingo - Practice for 10 months.</p>
+                        <p class="font-weight-light text-tertiary">∙ Kultivi - 4 months.</p>
+                        <p class="font-weight-light text-tertiary">∙ Wizard private tutor - 8 months.</p>
+                        <p class="font-weight-light text-tertiary">∙ Déficit almost 5 months not studying until find a platform that will be the best for me.</p>
+                        <p class="font-weight-light text-tertiary">∙ HyperEnglish - 2 month</p>
+                    </div>
+                    <hr class="bg-secondary" />
+                    <div>
+                        <p class="font-weight-bold text-center">Tecnologies what I work</p>
+                        <div>
+                            <p class="font-weight-light text-tertiary">∙ Angular</p>
+                            <p class="font-weight-light text-tertiary">∙ TypeScript</p>
+                            <p class="font-weight-light text-tertiary">∙ Node</p>
+                            <p class="font-weight-light text-tertiary">∙ Html 5</p>
+                            <p class="font-weight-light text-tertiary">∙ Css 3</p>
+                            <p class="font-weight-light text-tertiary">∙ Bootstrap 4, 5</p>
+                            <p class="font-weight-light text-tertiary">∙ Sass</p>
+                            <p class="font-weight-light text-tertiary">∙ Git, Gitgub, Gitlab</p>
+                        </div>
+                    </div>
+                    <hr class="bg-secondary" />
+                    <div>
+                        <p class="font-weight-bold text-center">What I'm studyng currently</p>
+                        <div class="mt-2">
+                            <p class="font-weight-light text-tertiary">∙ Ionic</p>
+                            <p class="font-weight-light text-tertiary">∙ Node</p>
+                            <p class="font-weight-light text-tertiary">∙ Javascript</p>
+                            <p class="font-weight-light text-tertiary">∙ Estrutura de dados</p>
+                            <p class="font-weight-light text-tertiary">∙ Programação Funcional</p>
+                            <p class="font-weight-light text-tertiary">∙ Orientada a objetos</p>
+                        </div>
+                    </div>
+                    <hr class="bg-secondary" />
+                    <div>
+                        <p class="font-weight-bold text-center">General knowledge</p>
+                        <div class="mt-2">
+                            <p class="font-weight-light text-tertiary">∙ Html 5</p>
+                            <p class="font-weight-light text-tertiary">∙ Css 3</p>
+                            <p class="font-weight-light text-tertiary">∙ Bootstrap 4, 5</p>
+                            <p class="font-weight-light text-tertiary">∙ Sass</p>
+                            <p class="font-weight-light text-tertiary">∙ Angular 12, 13</p>
+                            <p class="font-weight-light text-tertiary">∙ Javascript</p>
+                            <p class="font-weight-light text-tertiary">∙ TypeScript</p>
+                            <p class="font-weight-light text-tertiary">∙ Node</p>
+                            <p class="font-weight-light text-tertiary">∙ MySQL</p>
+                            <p class="font-weight-light text-tertiary">∙ MySQL Workbanch</p>
+                            <p class="font-weight-light text-tertiary">∙ PostGREE</p>
+                            <p class="font-weight-light text-tertiary">∙ Notion</p>
+                            <p class="font-weight-light text-tertiary">∙ Evernote</p>
+                            <p class="font-weight-light text-tertiary">∙ Trello</p>
+                            <p class="font-weight-light text-tertiary">∙ Figma</p>
+                            <p class="font-weight-light text-tertiary">∙ Photoshop</p>
+                            <p class="font-weight-light text-tertiary">∙ Comandos Cmd</p>
+                            <p class="font-weight-light text-tertiary">∙ Linux</p>
+                            <p class="font-weight-light text-tertiary">∙ Hardware</p>
+                            <p class="font-weight-light text-tertiary">∙ Software</p>
+                            <p class="font-weight-light text-tertiary">∙ Trello</p>
+                            <p class="font-weight-light text-tertiary">∙ English</p>
+                            <p class="font-weight-light text-tertiary">∙ Spanish</p>
+                            <p class="font-weight-light text-tertiary">∙ Git, Gitgub, Gitlab</p>
+                            <p class="font-weight-light text-tertiary">∙ MVC</p>
+                            <p class="font-weight-light text-tertiary">∙ Docker</p>
+                            <p class="font-weight-light text-tertiary">∙ Estrutura de dados</p>
+                            <p class="font-weight-light text-tertiary">∙ Programação Funcional</p>
+                            <p class="font-weight-light text-tertiary">∙ Orientada a objetos</p>
+                        </div>
+                    </div>
+                    <hr class="bg-secondary" />
+                    <div>
+                        <p class="font-weight-bold text-center">Platforms I studied</p>
+                        <div>
+                            <p class="font-weight-light text-tertiary">∙ Cod3r, hcode - Udemy.com</p>
+                            <p class="font-weight-light text-tertiary">∙ Devmedia - Devmedia.com</p>
+                            <p class="font-weight-light text-tertiary">∙ b7web - b7web.com</p>
+                            <p class="font-weight-light text-tertiary">∙ Rbtech, Hora de Codar - youtube.com</p>
+                            <p class="font-weight-light text-tertiary">∙ Livro: Bootstrap 4 Conheça a biblioteca Front-End mais utilizada no mundo</p>
+                            <p class="font-weight-light text-tertiary">∙ Hyper English - hyperenglish.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div *ngIf="overviewMode === 'skills'">
+                <h5 class="font-weight-black">Developer</h5>
+                <div>
+                    <div>
+                        <div class="skill-box mb-3 mt-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Git - Gitgub - Gitlab</small>
+                                <small>100%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Bootstrap</small>
+                                <small>90%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Css</small>
+                                <small>80%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Javascript</small>
+                                <small>60%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Angular</small>
+                                <small>50%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Typescript</small>
+                                <small>35%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Scss</small>
+                                <small>35%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Node</small>
+                                <small>5%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-box mb-3">
+                            <div class="d-flex justify-content-between">
+                                <small>Inglês</small>
+                                <small>50%</small>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div *ngIf="overviewMode === 'experience'">
+                <div class="d-flex align-items-start">
+                    <img src="/assets/icons/alpha_icon.png" alt="alpha" class="img-alpha" style="width: 4em;" />
+                    <div>
+                        <div>
+                            <h5 class="font-weight-black mt-3 pt-1">Alpha'a</h5>
+                            <p class="font-weight-regular mt-2">Tempo integral - 2 anos 3 meses</p>
+                            <p class="font-weight-light text-tertiary">Nova York, Estados Unidos</p>
+                        </div>
+                        <div class="mt-4">
+                            <h6 class="font-weight-bold">Desenvolvedor web júnior</h6>
+                            <p class="font-weight-regular mt-2">Jun de 2021 - até o momento · 10 meses</p>
+                            <p class="font-weight-black-italic text-tertiary mt-3">
+                                ∙ Desenvolvimento com Angular e já executando conhecimentos que o framework oferece (@input, @output, forms, building, etc), já incluindo o conhecimento do JavaScript junto com um plus do TypeScript.
+                                Trabalhando com um Sass e Bootstrap mais experiente e também cuidando do gerenciamento do projeto com Git. Refatorando e reestruturando códigos velhos feitos no começo da experiencia.
+                            </p>
+                            <p class="font-weight-black-italic text-tertiary mt-3">
+                                ∙ Agora usando Notion como gerenciador principal dos projetos, evernote para organização pessoal e anotações, e o figma ainda para receber instruções de designer do projeto.
+                            </p>
+                            <p class="font-weight-black-italic text-tertiary mt-3">
+                                ∙ Atualmente complementando estudos do Angular e TypeScript. Estudando programação orientada a objetos, Node + Express, SQL, HTTP/HTTPS. Já falando inglês mas ainda estudando (obs: Nunca se para), e seguindo
+                                como base um plano de carreira entregue pela empresa Alpha'a acreditando e investindo com a intenção de me formar um FullStack em um futuro breve.
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <h6 class="font-weight-bold">Estágio de desenvolvimento web</h6>
+                            <p class="font-weight-regular mt-2">Jan de 2020 - até o momento · 2 anos 3 meses</p>
+                            <p class="font-weight-black-italic text-tertiary mt-3">
+                                ∙ Desenvolvimento com Angular mas executando apenas o conhecimento básico com HTML, CSS3, Bootstrap, CMD, utilizando também git - github - gitlab, e iniciando os conhecimentos e prática de desenvolvimento que
+                                o Angular oferece.
+                            </p>
+                            <p class="font-weight-black-italic text-tertiary mt-3">
+                                ∙ Usando Trello como gerenciador principal dos projeto, o notion para organização pessoal, o evernote para anotações e o figma para receber instruções de designer do projeto.
+                            </p>
+                            <p class="font-weight-black-italic text-tertiary mt-3">∙ Iniciando estudos JavaScript, HTML5, CSS3, Bootstrap 4 e iniciando os primeiros passos no Inglês.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
