@@ -316,7 +316,78 @@
                     </div>
                 </div>
             </div>
-
+        </section>
+        <section class="bg-primary px-5">
+            <div class="text-center">
+                <small class="font-weight-thin text-secondary">Contact me</small>
+                <h1 class="font-weight-black text-wrap display-5">Let's to Talk</h1>
+            </div>
+            <div class="d-flex justify-content-between mt-5">
+                <div>
+                    <div class="box-shadow p-5">
+                        <h1 class="font-weight-black text-center">João <span class="text-secondary">Ricardo</span></h1>
+                        <p class="font-weight-thin-italic text-center">FullStack Developer</p>
+                        <div class="mt-4 mb-4 pb-1">
+                            <div class="d-flex align-items-center mb-2">
+                                <img style="filter: invert(1);" class="" src="/assets/icons/papel.png" alt="Trabalho">
+                                <p class="font-weight-bold mx-2">FullStack Developer & freelancer</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img style="filter: invert(1);" class="" src="/assets/icons/email.png" alt="email">
+                                <p class="font-weight-bold mx-2">joaoricardobianchini@hotmail.com</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img style="filter: invert(1);" class="" src="/assets/icons/phone.png" alt="`Telefone">
+                                <p class="font-weight-bold mx-2">(11) 9 5766-6011</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img style="filter: invert(1);" class="" src="/assets/icons/location.png" alt="localização">
+                                <p class="font-weight-bold mx-2">São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-shadow p-5 mt-5">
+                        <p class="font-weight-bold">Dowmload my curriculum</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <button class="btn-mode font-weight-bold p-0">Download curriculum</button>
+                            <p class="p-2">or</p>
+                            <button class="btn-mode font-weight-bold">Formulario</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <img class="img-dev box-shadow" src="/assets/images/bg4.jpg" alt="Wallpaper de programador">
+                </div>
+            </div>
+            <form [formGroup]="dataForm" (submit)="saveUser()" class="d-flex justify-content-center mt-5">
+                <div class="box-shadow p-5">
+                    <div class="d-flex">
+                        <div class="w-100 m-2">
+                            <p>Firts name</p>
+                            <input formControlName="name" class="bg-primary font-weight-regular w-100" type="text" name="" id="name" value="João Ricardo" placeholder="João Ricardo">
+                        </div>
+                        <div class="w-100 m-2">
+                            <p>Phone</p>
+                            <input formControlName="phone" class="bg-primary font-weight-regular w-100" type="tel" name="" id="phone" value="119576666011" placeholder="119576666011">
+                        </div>
+                    </div>
+                    <div class="m-2">
+                        <p>Email</p>
+                        <input formControlName="email" class="bg-primary font-weight-regular w-100" type="email" name="" id="email" value="joaoricardobianchini@hotmail.com" placeholder="joaoricardobianchini@hotmail.com">
+                    </div>
+                    <div class="m-2">
+                        <p>Assunto</p>
+                        <input formControlName="topic" class="bg-primary font-weight-regular w-100" type="text" name="" id="topic" value="Freelancer" placeholder="Freelancer...">
+                    </div>
+                    <div class="m-2">
+                        <p>Message</p>
+                        <textarea formControlName="message" class="bg-primary font-weight-regular" name="" id="message" cols="90" rows="13" aria-valuetext="Olá, gostaria de marcar uma reuniao para falarmos sobre" placeholder="Olá, gostaria de marcar uma reuniao para falarmos sobre..."></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn-mode font-weight-regular" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
         </section>
     </main>
 </div>

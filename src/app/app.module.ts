@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocalStorageService } from './service/local-storage/local-storage.service';
 
 
 
@@ -21,7 +23,12 @@ import { ProgressbarComponent } from './components/progressbar/progressbar.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

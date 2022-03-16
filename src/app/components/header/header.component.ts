@@ -7,16 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() language: EventEmitter<boolean> = new EventEmitter();
-
   constructor() { }
 
   ngOnInit(): void { }
-
-  langTranslate() {
-    this.language.emit()
-  }
-
-  
 
 }

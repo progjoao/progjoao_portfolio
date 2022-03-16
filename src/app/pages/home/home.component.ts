@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LocalStorageService } from 'src/app/service/local-storage/local-storage.service';
+import Swal from 'sweetalert2'
+
+// import { DataForm, dataForm } from 'src/app/interfaces/dataform';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
   language: boolean = false;
   overviewMode: string = '';
+
+  public dataForm: FormGroup;
+  datasLocalStorage!: any;
+
   
   projects: any = [
     {id: 1, name: 'Alphaa io', image:'/assets/images/alphaa.io.png', likes: 601, link: 'https://www.alphaa.io/home'},
@@ -16,21 +26,59 @@ export class HomeComponent implements OnInit {
     // {id: 4, name: 'Jb Flipflop', image:'/assets/images/jchinelos.png', likes: 983, link: 'http://jchinelos.devseate.com/'},
     {id: 5, name: 'Ponto Da Alegria', image:'/assets/images/pizzaria.png', likes: 552, link: 'http://pizzaria.devseate.com/'},
   ]
-
-  
-
-  constructor() { }
+ 
+  constructor(
+    private formBuilder: FormBuilder,
+    private LocalStorageService: LocalStorageService,
+  ) {
+    this.dataForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      phone: ['', Validators.required],
+      email: ['', Validators.required],
+      topic: ['', Validators.required],
+      message: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
     this.overviewMode = 'study'
+    this.saveUser();
+    this.clearLocalStorage();
   }
-
-  onChangeTranslate(): void {
-    this.language = !this.language;
-  }  
 
   setOverviewMode(mode: string): void {
     this.overviewMode = mode;
   }
 
+  saveUser() {
+    if(this.dataForm.dirty && this.dataForm.valid) {
+      Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Obrigado pelo contato, responderei o mais rapido possivel',
+          showConfirmButton: false,
+          timer: 5000
+      });
+      localStorage.setItem("formdata", JSON.stringify(this.dataForm.value));
+
+      // alert( 
+      //   `
+      //   Name: ${this.dataForm.value.name}
+      //   Phone: ${this.dataForm.value.phone}
+      //   Email: ${this.dataForm.value.email} 
+      //   Topic: ${this.dataForm.value.topic} 
+      //   Message: ${this.dataForm.value.message} 
+      //   `
+      // )
+    }
+  }
+  
+  clearLocalStorage() {
+    localStorage.clear();
+  }
+
+  // saveItemLocalStorage() {
+  //   this.datasLocalStorage = localStorage.getItem('id')
+  //   return this.datasLocalStorage
+  // }
 }
