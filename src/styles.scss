@@ -24,17 +24,14 @@ h3 { font-size: 2.1em;}
 h4 { font-size: 1.8em;}
 h5 { font-size: 1.4em;}
 h6 { font-size: 0.85em;}
+p {font-size: 0.9em;}
 small {font-size: 0.675em;}
+
+.border-radius-defult {border-radius: 9px;}
 
 a {
     font-size: 1em;
     color: var(--white-color);
     text-decoration: none !important;
     cursor: pointer;
-}
-p {
-    font-size: 0.9em;
-}
-.border-radius-defult {
-    border-radius: 9px;
 }

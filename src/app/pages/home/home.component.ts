@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     // {id: 4, name: 'Jb Flipflop', image:'/assets/images/jchinelos.png', likes: 983, link: 'http://jchinelos.devseate.com/'},
     {id: 5, name: 'Ponto Da Alegria', image:'/assets/images/pizzaria.png', likes: 552, link: 'http://pizzaria.devseate.com/'},
   ]
- 
+
   constructor(
     private formBuilder: FormBuilder,
     private LocalStorageService: LocalStorageService,
@@ -55,30 +55,16 @@ export class HomeComponent implements OnInit {
       Swal.fire({
           position: 'center',
           icon: 'success',
-          title: 'Obrigado pelo contato, responderei o mais rapido possivel',
+          title: 'Obrigado pelo contato, retornarei o mais rapido possivel',
           showConfirmButton: false,
           timer: 5000
       });
       localStorage.setItem("formdata", JSON.stringify(this.dataForm.value));
-
-      // alert( 
-      //   `
-      //   Name: ${this.dataForm.value.name}
-      //   Phone: ${this.dataForm.value.phone}
-      //   Email: ${this.dataForm.value.email} 
-      //   Topic: ${this.dataForm.value.topic} 
-      //   Message: ${this.dataForm.value.message} 
-      //   `
-      // )
     }
   }
-  
+
   clearLocalStorage() {
     localStorage.clear();
   }
 
-  // saveItemLocalStorage() {
-  //   this.datasLocalStorage = localStorage.getItem('id')
-  //   return this.datasLocalStorage
-  // }
 }
