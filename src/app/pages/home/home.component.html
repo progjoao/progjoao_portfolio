@@ -11,7 +11,7 @@
       <a class="font-weight-thin mb-2" href="#about" routerLinkActive="selected">About</a>
       <a class="font-weight-thin mb-2" href="#portfolio" routerLinkActive="selected">Portfolio</a>
       <a class="font-weight-thin mb-2" href="#datas" routerLinkActive="selected">Resume</a>
-      <a class="font-weight-thin mb-2" href="" routerLinkActive="selected">Contact</a>
+      <a class="font-weight-thin mb-2" href="#contactme" routerLinkActive="selected">Contact</a>
       <a class="font-weight-thin mb-2" href="" routerLinkActive="selected">Blog</a>
     </div>
     <hr class="bg-secondary w-100 m-0" />
@@ -244,7 +244,7 @@
       </div>
     </section>
 
-    <section class="bg-primary px-5">
+    <section id="contactme" class="bg-primary px-5">
       <div class="text-center">
         <small class="font-weight-regular">Contact me</small>
         <h1 class=" font-weight-black text-wrap display-5">Let's to Talk</h1>
@@ -281,7 +281,7 @@
                 class="btn-mode font-weight-bold d-flex align-items-center justify-content-center mb-4"
                 download="">Download
                 curriculum</a>
-              <a class="btn-mode font-weight-bold">Formulario</a>
+              <a href="#form" class="btn-mode font-weight-bold">Formulario</a>
             </div>
             <div class="d-flex justify-content-center mt-4 py-5">
               <embed src="../../../assets/documents/Codigo Limpo - Completo PT.pdf" width="70%" height="400em" type="">
@@ -292,42 +292,52 @@
           <img class="box-shadow" src="/assets/images/setup2.JPG" alt="Wallpaper de programador">
         </div>
       </div>
-      <!-- <form [formGroup]="dataForm" (submit)="saveUser()" class="d-flex justify-content-center mt-5">
-        <div class="box-shadow p-5">
+    </section>
+
+    <section id="form" class="bg-primary py-5 px-5">
+      <form [formGroup]="dataForm" (submit)="saveUser()" class="row d-flex justify-content-center mt-5">
+        <div class="col-12 box-shadow p-5">
           <div class="d-flex">
-            <div class="w-100 m-2">
-              <p>Firts name</p>
-              <input formControlName="name" class="bg-primary font-weight-regular w-100" type="text" name="" id="name"
-                value="João Ricardo" placeholder="João Ricardo">
+            <div class="col-lg-6 m-2">
+              <p>Firt name</p>
+              <input formControlName="name" class="bg-primary font-weight-regular mt-2 w-100" type="text" name=""
+                id="name" value="João Ricardo" placeholder="João">
             </div>
-            <div class="w-100 m-2">
+            <div class="col-lg-6 m-2">
+              <p>Second name</p>
+              <input formControlName="name" class="bg-primary font-weight-regular mt-2 w-100" type="text" name=""
+                id="name" value="João Ricardo" placeholder="Vieira">
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="col-lg-6 m-2">
               <p>Phone</p>
-              <input formControlName="phone" class="bg-primary font-weight-regular w-100" type="tel" name="" id="phone"
-                value="119576666011" placeholder="119576666011">
+              <input formControlName="phone" class="bg-primary font-weight-regular mt-2 w-100" type="tel" name=""
+                id="phone" value="119576666011" placeholder="119576666011">
+            </div>
+            <div class="col-lg-6 m-2">
+              <p>Email</p>
+              <input formControlName="email" class="bg-primary font-weight-regular mt-2 w-100" type="email" name=""
+                id="email" value="joaoricardobianchini@hotmail.com" placeholder="joaoricardobianchini@hotmail.com">
+
             </div>
           </div>
-          <div class="m-2">
-            <p>Email</p>
-            <input formControlName="email" class="bg-primary font-weight-regular w-100" type="email" name="" id="email"
-              value="joaoricardobianchini@hotmail.com" placeholder="joaoricardobianchini@hotmail.com">
-          </div>
-          <div class="m-2">
+          <div class="col-12 m-2">
             <p>Assunto</p>
-            <input formControlName="topic" class="bg-primary font-weight-regular w-100" type="text" name="" id="topic"
-              value="Freelancer" placeholder="Freelancer...">
+            <input formControlName="topic" class="bg-primary font-weight-regular mt-2 w-100" type="text" name=""
+              id="topic" value="Freelancer" placeholder="Freelancer...">
           </div>
-          <div class="m-2">
+          <div class="col-12 m-2">
             <p>Message</p>
-            <textarea formControlName="message" class="bg-primary font-weight-regular" name="" id="message" cols="90"
-              rows="13" aria-valuetext="Olá, gostaria de marcar uma reuniao para falarmos sobre"
+            <textarea formControlName="message" class="bg-primary font-weight-regular w-100" name="" id="message"
+              cols="" rows="13" aria-valuetext="Olá, gostaria de marcar uma reuniao para falarmos sobre"
               placeholder="Olá, gostaria de marcar uma reuniao para falarmos sobre..."></textarea>
           </div>
           <div class="d-flex justify-content-end">
             <button class="btn-mode font-weight-regular" type="submit">Send</button>
           </div>
         </div>
-      </form> -->
+      </form>
     </section>
-
   </main>
 </div>
