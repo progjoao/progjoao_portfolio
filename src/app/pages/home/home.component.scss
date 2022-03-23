@@ -13,9 +13,12 @@
       }
     }
 
-    .img-perfil {
-      width: 100%;
+    .img-perfil-desktop {
+      width: 10em;
+      border: 0.1px solid #ffff !important;
+      border-radius: 10em;
       z-index: 1;
+      margin-top: 2em;
     }
 
     .socials {
@@ -35,6 +38,13 @@
     height: 45em;
     overflow-y: scroll !important;
 
+    .img-perfil-mobile {
+      width: 13em;
+      border: 1px solid #fff !important;
+      border-radius: 10em;
+      display: none;
+    }
+
     section {
       padding: 7rem 8rem;
       margin-bottom: 0.1em !important;
@@ -48,7 +58,8 @@
       height: 100%;
 
       .filter {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 1em;
       }
     }
 
@@ -130,7 +141,7 @@
   input {
     border: 2px solid #191b1e;
     border-radius: 5px;
-    height: 41px;
+    height: 55px;
     color: white;
     font-size: 12px;
     letter-spacing: 1px;
@@ -223,6 +234,13 @@
   }
   .portfolio {
     display: flex !important;
+  }
+
+  .img-perfil-mobile {
+    display: block !important;
+    width: 13em;
+    border: 0.1px solid #fff !important;
+    border-radius: 10em;
   }
 }
 
