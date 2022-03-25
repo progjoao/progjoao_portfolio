@@ -1,8 +1,8 @@
 <div class="principal d-flex">
-  <aside class="bg-primary d-flex flex-column align-items-center">
+  <aside class="d-flex flex-column align-items-center">
     <div class="">
       <div class="d-flex flex-column align-items-center">
-        <img class="bg-primary img-perfil-desktop" src="/assets/images/eu.png" alt="Foto de perfil">
+        <img class="img-perfil-desktop" src="/assets/images/eu.jpg" alt="Foto de perfil">
         <h1 class="font-weight-bold text-nowrap h4 p-3 pb-0">João <span>Ricardo</span></h1>
       </div>
     </div>
@@ -14,28 +14,19 @@
       <a class="font-weight-thin mb-2" href="#contactme" routerLinkActive="selected">Contact</a>
       <a class="font-weight-thin mb-2" href="" routerLinkActive="selected">Blog</a>
     </div>
-    <hr class="bg-secondary w-100 m-0" />
-    <div class="d-flex text-center p-3">
-      <a href="https://web.whatsapp.com/send?phone=55957666011"><img width="40" class="socials p-2"
-          src="/assets/icons/wpp.png" alt="Whatpp"></a>
-      <a href="https://www.linkedin.com/in/joaoricardobianchinivieira/"><img width="40" class="socials p-2"
-          src="/assets/icons/in.png" alt="Linkedin"></a>
-      <a href=""><img width="40" class="socials p-2" src="/assets/icons/in.png" alt="Linkedin"></a>
-    </div>
   </aside>
   <main class="">
 
-    <section id="home"
-      class="first-section bg-primary d-flex flex-column justify-content-center align-items-center text-center">
+    <section id="home" class="first-section d-flex flex-column justify-content-center align-items-center text-center">
       <div class="filter d-flex flex-column align-items-center p-5">
-        <img class="img-perfil-mobile bg-primary mb-3" src="/assets/images/eu.png" alt="Foto de perfil">
+        <img class="img-perfil-mobile mb-3" src="/assets/images/eu.jpg" alt="Foto de perfil">
         <h1 class="font-weight-black text-wrap display-3">I'm a Developer</h1>
         <h6 class="font-weight-black h4 pb-3 mt-2 mb-4">FullStack</h6>
-        <a href="#portfolio" class="font-weight-thin btn-mode">View portifolio</a>
+        <button href="#portfolio" class="font-weight-thin">View portifolio</button>
       </div>
     </section>
 
-    <section id="about" class="second-section bg-primary d-flex flex-column justify-content-center align-items-center">
+    <section id="about" class="second-section d-flex flex-column justify-content-center align-items-center">
       <h1 class="font-weight-black text-wrap display-5 mt-3">About me</h1>
       <div>
         <div class="media mt-5 mb-3">
@@ -75,18 +66,18 @@
       </div>
     </section>
 
-    <section id="portfolio"
-      class="third-section bg-primary d-flex flex-column justify-content-center align-items-center">
+    <section id="portfolio" class="third-section  d-flex flex-column justify-content-center align-items-center">
       <h1 class="font-weight-black text-wrap display-5 mb-3 text-center">My portfolio</h1>
       <div class="portfolio d-flex flex-wrap justify-content-center">
-        <div class="cards" *ngFor="let project of projects">
+        <div class="card" *ngFor="let project of projects">
           <a target="_black" href="{{project.link}}">
             <img style="width: 100%;" src="{{ project.image }}" alt="Alphaaio">
           </a>
           <div class="d-flex justify-content-between">
             <small class="font-weight-regular mt-2">WEBSITE</small>
             <a class="d-flex box-heart mt-1">
-              <img class="heart" src="/assets/icons/heart.png" alt="Coração">
+              <img class="heart" src="/assets/icons/heart_one.png" alt="Like">
+              <!-- <img class="heart" src="/assets/icons/heart_two.png" alt="Like"> -->
               <small class="font-weight-thin-italic"> {{ project.likes }} </small>
             </a>
           </div>
@@ -95,103 +86,18 @@
       </div>
     </section>
 
-    <section id="datas" class="fourth-section bg-primary">
+    <section id="datas" class="fourth-section ">
       <div class="text-center">
         <small class="font-weight-regular">+2 experience years</small>
         <h1 class="font-weight-black text-wrap display-5">Resume</h1>
       </div>
       <div class="d-flex justify-content-center mt-5">
-        <button class="font-weight-thin btn-mode" (click)="setOverviewMode('study')">Studies</button>
-        <button class="font-weight-thin btn-mode" (click)="setOverviewMode('experience')">Experience</button>
+        <button class="font-weight-thin" (click)="setOverviewMode('study')">Studies</button>
+        <button class="font-weight-thin" (click)="setOverviewMode('experience')">Experience</button>
       </div>
       <hr class="bg-secondary mt-5" />
       <div *ngIf="overviewMode === 'study'">
-        <div>
-          <div>
-            <h6 class="font-weight-bold">English</h6>
-            <p class="font-weight-light mt-1">∙ EnglishBay - 2 months.</p>
-            <p class="font-weight-light">∙ Duo lingo - Practice for 10 months.</p>
-            <p class="font-weight-light">∙ Kultivi - 4 months.</p>
-            <p class="font-weight-light">∙ Wizard private tutor - 8 months.</p>
-            <p class="font-weight-light">∙ Déficit almost 5 months not studying until find a platform that
-              will be the best for me.</p>
-            <p class="font-weight-light">∙ HyperEnglish - 2 month</p>
-          </div>
-          <hr class="bg-secondary" />
-          <div>
-            <h6 class="font-weight-bold text-center">Tecnologies what I work</h6>
-            <div>
-              <p class="font-weight-light">∙ Angular</p>
-              <p class="font-weight-light">∙ TypeScript</p>
-              <p class="font-weight-light">∙ Adonis</p>
-              <p class="font-weight-light">∙ Html 5</p>
-              <p class="font-weight-light">∙ Css 3</p>
-              <p class="font-weight-light">∙ Bootstrap 4, 5</p>
-              <p class="font-weight-light">∙ Sass</p>
-              <p class="font-weight-light">∙ Git, Gitgub, Gitlab</p>
-            </div>
-          </div>
-          <hr class="bg-secondary" />
-          <div>
-            <h6 class="font-weight-bold text-center">What I'm studyng currently</h6>
-            <div class="mt-2">
-              <p class="font-weight-light">∙ Ionic</p>
-              <p class="font-weight-light">∙ Node</p>
-              <p class="font-weight-light">∙ Javascript</p>
-              <p class="font-weight-light">∙ Estrutura de dados</p>
-              <p class="font-weight-light">∙ Programação Funcional</p>
-              <p class="font-weight-light">∙ Orientada a objetos</p>
-            </div>
-          </div>
-          <hr class="bg-secondary" />
-          <div>
-            <h6 class="font-weight-bold text-center">General knowledge</h6>
-            <div class="mt-2">
-              <p class="font-weight-light">∙ Html 5</p>
-              <p class="font-weight-light">∙ Css 3</p>
-              <p class="font-weight-light">∙ Bootstrap 4, 5</p>
-              <p class="font-weight-light">∙ Sass</p>
-              <p class="font-weight-light">∙ Angular 12, 13</p>
-              <p class="font-weight-light">∙ Javascript</p>
-              <p class="font-weight-light">∙ TypeScript</p>
-              <p class="font-weight-light">∙ Adonis</p>
-              <p class="font-weight-light">∙ MySQL</p>
-              <p class="font-weight-light">∙ MySQL Workbanch</p>
-              <p class="font-weight-light">∙ PostGREE</p>
-              <p class="font-weight-light">∙ Notion</p>
-              <p class="font-weight-light">∙ Evernote</p>
-              <p class="font-weight-light">∙ Trello</p>
-              <p class="font-weight-light">∙ Figma</p>
-              <p class="font-weight-light">∙ Photoshop</p>
-              <p class="font-weight-light">∙ Comandos Cmd</p>
-              <p class="font-weight-light">∙ Linux</p>
-              <p class="font-weight-light">∙ Hardware</p>
-              <p class="font-weight-light">∙ Software</p>
-              <p class="font-weight-light">∙ Trello</p>
-              <p class="font-weight-light">∙ English</p>
-              <p class="font-weight-light">∙ Spanish</p>
-              <p class="font-weight-light">∙ Git, Gitgub, Gitlab</p>
-              <p class="font-weight-light">∙ MVC</p>
-              <p class="font-weight-light">∙ Docker</p>
-              <p class="font-weight-light">∙ Estrutura de dados</p>
-              <p class="font-weight-light">∙ Programação Funcional</p>
-              <p class="font-weight-light">∙ Orientada a objetos</p>
-            </div>
-          </div>
-          <hr class="bg-secondary" />
-          <div>
-            <h6 class="font-weight-bold text-center mb-2">Platforms I studied</h6>
-            <div>
-              <p class="font-weight-light">∙ Cod3r, hcode - Udemy.com</p>
-              <p class="font-weight-light">∙ Devmedia - Devmedia.com</p>
-              <p class="font-weight-light">∙ b7web - b7web.com</p>
-              <p class="font-weight-light">∙ Rbtech, Hora de Codar - youtube.com</p>
-              <p class="font-weight-light">∙ Livro: Bootstrap 4 Conheça a biblioteca Front-End mais
-                utilizada no mundo</p>
-              <p class="font-weight-light">∙ Hyper English - hyperenglish.com</p>
-            </div>
-          </div>
-        </div>
+        <app-Study></app-Study>
       </div>
       <div *ngIf="overviewMode === 'experience'">
         <div class="d-flex align-items-start">
@@ -199,15 +105,17 @@
           <div>
             <div>
               <h5 class="font-weight-black mt-3 pt-1">Alpha'a</h5>
-              <p class="font-weight-regular mt-2">Tempo integral - 2 anos 3 meses</p>
+              <p class="font-weight-regular mt-2">Tempo integral - 2 anos 4 meses</p>
               <p class="font-weight-light">Nova York, Estados Unidos</p>
             </div>
             <div class="mt-4">
               <h6 class="font-weight-bold">Desenvolvedor web júnior</h6>
               <p class="font-weight-regular mt-2">Jun de 2021 - até o momento · 10 meses</p>
               <p class="font-weight-black-italic mt-3">
-                ∙ Desenvolvimento com Angular e já executando conhecimentos que o framework oferece (@input, @output,
-                forms, building, etc), já incluindo o conhecimento do JavaScript junto com um plus do TypeScript.
+                ∙ Desenvolvimento com Angular 13 e não mais AngularJS e já executando conhecimentos que o framework
+                oferece,
+                já incluindo o Lógica e TypeScript.
+                Iniciando Algumas tarefas em Node com Framework Adonis 5.
                 Trabalhando com um Sass e Bootstrap mais experiente e também cuidando do gerenciamento do projeto com
                 Git. Refatorando e reestruturando códigos velhos feitos no começo da experiencia.
               </p>
@@ -217,19 +125,17 @@
               </p>
               <p class="font-weight-black-italic mt-3">
                 ∙ Atualmente complementando estudos do Angular e TypeScript. Estudando programação orientada a objetos,
-                Node + Express, SQL, HTTP/HTTPS. Já falando inglês mas ainda estudando (obs: Nunca se para), e seguindo
+                Node + Adonis, SQL, Axio. Já falando inglês mas ainda estudando (obs: Nunca se para), e seguindo
                 como base um plano de carreira entregue pela empresa Alpha'a acreditando e investindo com a intenção de
                 me formar um FullStack em um futuro breve.
               </p>
             </div>
             <div class="mt-4">
               <h6 class="font-weight-bold">Estágio de desenvolvimento web</h6>
-              <p class="font-weight-regular mt-2">Jan de 2020 - até o momento · 2 anos 3 meses</p>
+              <p class="font-weight-regular mt-2">Jan de 2020 - Jun de 2021 · 1 anos 6 meses</p>
               <p class="font-weight-black-italic mt-3">
-                ∙ Desenvolvimento com Angular mas executando apenas o conhecimento básico com HTML, CSS3, Bootstrap,
-                CMD, utilizando também git - github - gitlab, e iniciando os conhecimentos e prática de desenvolvimento
-                que
-                o Angular oferece.
+                ∙ Escrita de codigos em HTML5, CSS3 e Bootstrap 4, CMD, utilizando também git - github - gitlab, e
+                iniciando os conhecimentos e prática de desenvolvimento em Javascript e AngularJS.
               </p>
               <p class="font-weight-black-italic mt-3">
                 ∙ Usando Trello como gerenciador principal dos projeto, o notion para organização pessoal, o evernote
@@ -243,7 +149,7 @@
       </div>
     </section>
 
-    <section id="contactme" class="bg-primary px-5">
+    <section id="contactme" class=" px-5">
       <div class="text-center">
         <small class="font-weight-regular">Contact me</small>
         <h1 class=" font-weight-black text-wrap display-5">Let's to Talk</h1>
@@ -254,17 +160,33 @@
             <h1 class="font-weight-black text-center">João <span class="">Ricardo</span></h1>
             <p class=" font-weight-thin-italic text-center">FullStack Developer</p>
             <div class="my-5 pb-1">
+
               <div class="d-flex align-items-center mb-3">
-                <img style="filter: invert(1); width: 20px;" class="" src="/assets/icons/papel.png" alt="Trabalho">
-                <p class="font-weight-bold mx-2">FullStack Developer & freelancer</p>
+                <img class="mx-2" src="/assets/icons/in.png" alt="Icone do linkedin">
+                <a target="_blank" href="https://www.linkedin.com/in/joaoricardobianchinivieira/"
+                  class="font-weight-bold mx-2">/joaoricardobianchinivieira</a>
+                <!-- <p class="font-weight-bold mx-2">/joaoricardobianchinivieira</p> -->
               </div>
               <div class="d-flex align-items-center mb-3">
-                <img style="filter: invert(1); width: 20px;" class="" src="/assets/icons/phone.png" alt="`Telefone">
-                <p class="font-weight-bold mx-2">(11) 9 5766-6011</p>
+                <img class="mx-2" src="/assets/icons/github.png" alt="Link do github para ver meus projetos">
+                <a target="_blank" href="https://github.com/progjoao" class="font-weight-bold mx-2">/progjoao</a>
+                <!-- <p class="font-weight-bold mx-2">/progjoao</p> -->
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <img class="mx-2" src="/assets/icons/instagram.png" alt="Link do instagram app para falar comigo">
+                <a target="_blank" href="https://www.instagram.com/prog.joao/"
+                  class="font-weight-bold mx-2">/prog.joao</a>
+                <!-- <p class="font-weight-bold mx-2">/prog.joao</p> -->
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <img class="mx-2" src="/assets/icons/wpp.png" alt="Link do whats app para falar comigo">
+                <a target="_blank"
+                  href="https://wa.me/5511957666011?text=Olá%20João,%20gostaria%20de%20marcar%20uma%20reunião%20"
+                  class="font-weight-bold mx-2">(11) 9 5766-6011</a>
+                <!-- <p class="font-weight-bold mx-2">(11) 9 5766-6011</p> -->
               </div>
               <div class="d-flex align-items-center">
-                <img style="filter: invert(1); width: 16px; margin-left: 2px; margin-right: 1px;" class=""
-                  src="/assets/icons/location.png" alt="localização">
+                <img class="mx-2" src="/assets/icons/location.png" alt="localização">
                 <p class="font-weight-bold mx-2">São Paulo, Brasil</p>
               </div>
             </div>
@@ -272,9 +194,8 @@
           <div class="box-shadow py-5 mt-5">
             <h5 class="font-weight-bold text-center mt-5">Dowmload curriculum</h5>
             <div class="d-flex flex-column align-items-center mt-3">
-              <a href="/assets/documents/Codigo Limpo - Completo PT.pdf"
-                class="btn-mode font-weight-bold d-flex align-items-center justify-content-center mb-4"
-                download="">Download
+              <a href="/assets/documents/Codigo Limpo - Completo PT.pdf" class="btn-mode font-weight-bold d-flex
+                align-items-center justify-content-center mb-4" download="">Download
                 curriculum</a>
               <a href="#form" class="btn-mode font-weight-bold">Formulario</a>
             </div>
@@ -289,47 +210,46 @@
       </div>
     </section>
 
-    <section id="form" class="bg-primary py-sm-5 px-5">
+    <section id="form" class=" py-sm-5 px-5">
       <form [formGroup]="dataForm" (submit)="saveUser()" class="row d-flex justify-content-center mt-5">
         <div class="col-12 box-shadow p-3" style="padding-right: 2rem !important;">
           <div class="">
             <div class="col-lg-6 w-100 mt-3 m-2">
-              <p>Firt name</p>
-              <input formControlName="name" class="bg-primary font-weight-regular mt-2 w-100" type="text" name=""
-                id="name" value="João Ricardo" placeholder="João">
+              <p>First name</p>
+              <input formControlName="name" class=" font-weight-regular mt-2 w-100" type="text" name="" id="name"
+                value="João Ricardo" placeholder="João">
             </div>
             <div class="col-lg-6 w-100 mt-3 m-2">
               <p>Second name</p>
-              <input formControlName="name" class="bg-primary font-weight-regular mt-2 w-100" type="text" name=""
-                id="name" value="João Ricardo" placeholder="Vieira">
+              <input formControlName="name" class=" font-weight-regular mt-2 w-100" type="text" name="" id="name"
+                value="João Ricardo" placeholder="Vieira">
             </div>
           </div>
           <div class="">
             <div class="col-lg-6 w-100 mt-3 m-2">
               <p>Phone</p>
-              <input formControlName="phone" class="bg-primary font-weight-regular mt-2 w-100" type="tel" name=""
-                id="phone" value="119576666011" placeholder="119576666011">
+              <input formControlName="phone" class=" font-weight-regular mt-2 w-100" type="tel" name="" id="phone"
+                value="119576666011" placeholder="119576666011">
             </div>
             <div class="col-lg-6 w-100 mt-3 m-2">
               <p>Email</p>
-              <input formControlName="email" class="bg-primary font-weight-regular mt-2 w-100" type="email" name=""
-                id="email" value="joaoricardobianchini@hotmail.com" placeholder="joaoricardobianchini@hotmail.com">
-
+              <input formControlName="email" class=" font-weight-regular mt-2 w-100" type="email" name="" id="email"
+                value="joaoricardobianchini@hotmail.com" placeholder="joaoricardobianchini@hotmail.com">
             </div>
           </div>
           <div class="col-12 m-2">
             <p>Assunto</p>
-            <input formControlName="topic" class="bg-primary font-weight-regular mt-2 w-100" type="text" name=""
-              id="topic" value="Freelancer" placeholder="Freelancer...">
+            <input formControlName="topic" class=" font-weight-regular mt-2 w-100" type="text" name="" id="topic"
+              value="Freelancer" placeholder="Freelancer...">
           </div>
           <div class="col-12 m-2">
             <p>Message</p>
-            <textarea formControlName="message" class="bg-primary font-weight-regular w-100" name="" id="message"
-              cols="" rows="13" aria-valuetext="Olá, gostaria de marcar uma reuniao para falarmos sobre"
+            <textarea formControlName="message" class=" font-weight-regular w-100" name="" id="message" cols=""
+              rows="13" aria-valuetext="Olá, gostaria de marcar uma reuniao para falarmos sobre"
               placeholder="Olá, gostaria de marcar uma reuniao para falarmos sobre..."></textarea>
           </div>
           <div class="d-flex justify-content-end">
-            <button class="btn-mode font-weight-regular" type="submit">Send</button>
+            <button class="font-weight-regular" type="submit">Send</button>
           </div>
         </div>
       </form>

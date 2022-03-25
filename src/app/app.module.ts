@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocalStorageService } from './service/local-storage/local-storage.service';
+import { StudyComponent } from './study/study.component';
 
 
 
@@ -19,6 +20,7 @@ import { LocalStorageService } from './service/local-storage/local-storage.servi
     HomeComponent,
     FooterComponent,
     ProgressbarComponent,
+    StudyComponent,
   ],
   imports: [
     BrowserModule,

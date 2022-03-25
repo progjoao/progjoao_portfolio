@@ -4,26 +4,10 @@
 @import url(./assets/scss/_variables.scss);
 @import url(./assets/scss/_fonts.scss);
 
-.text-secondary {
-  color: var(--secondary-color) !important;
-}
-.text-tertiary {
-  color: var(--tertiary-color) !important;
-}
-.text-white {
-  color: var(--white-color) !important;
-}
-.bg-primary {
-  background-color: var(--background-color-primary) !important;
-}
-.bg-secondary {
-  background-color: var(--background-color-secondary) !important;
-}
-
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
+  background-color: var(--background-black);
   font-family: regular;
 }
 
@@ -40,36 +24,51 @@ small {
 }
 h1 {
   font-size: 3em;
-} //1em = 16px
+  color: var(--white-color);
+}
 h2 {
   font-size: 2.5em;
 }
 h3 {
   font-size: 2.1em;
+  color: var(--white-color);
 }
 h4 {
   font-size: 1.8em;
 }
 h5 {
   font-size: 1.4em;
+  color: var(--secondary-color-blue);
 }
 h6 {
   font-size: 0.85em;
+  color: var(--white-color);
+  line-height: 1.7em;
 }
 p {
   font-size: 0.9em;
+  color: var(--tertiary-color-grey);
+}
+span {
+  color: var(--secondary-color-blue);
 }
 small {
   font-size: 0.675em;
+  color: var(--white-color);
 }
-
 .border-radius-defult {
   border-radius: 9px;
 }
-
 a {
   font-size: 1em;
   color: var(--white-color);
   text-decoration: none !important;
+  color: var(--white-color);
   cursor: pointer;
+
+  &:hover {
+    color: #0051ff !important;
+    transition: 0.4s !important;
+    transform: translateY(-3px) !important;
+  }
 }
